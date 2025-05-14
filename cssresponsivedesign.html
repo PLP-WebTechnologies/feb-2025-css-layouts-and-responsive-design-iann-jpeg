@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Webpage</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #333;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      background: #444;
+      color: #fff;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0.5rem;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    main {
+      background: #f4f4f4;
+      padding: 1rem;
+    }
+
+    aside {
+      background: #e2e2e2;
+      padding: 1rem;
+    }
+
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+
+    /* Media Queries for responsiveness */
+    @media (max-width: 1024px) {
+      .container {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav a {
+        margin: 0.25rem 0;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Responsive Webpage</h1>
+  </header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+  <div class="container">
+    <main>
+      <h2>Main Content</h2>
+      <p>This section expands to take more space on larger screens and stacks on smaller ones.</p>
+    </main>
+    <aside>
+      <h2>Sidebar</h2>
+      <p>This sidebar appears alongside the content on wider screens and below on narrower ones.</p>
+    </aside>
+  </div>
+  <footer>
+    <p>&copy; 2025 Responsive Web</p>
+  </footer>
+</body>
+</html>
